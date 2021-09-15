@@ -1,0 +1,13 @@
+nextflow run nf-core/sarek -r master \
+--input /home/xxxx/run_name/input_sample-sheet.tsv \
+-profile gls \
+-c /home/xxxx/run_name/your_gcp.config \
+--tools HaplotypeCaller,snpeff \
+--genome GRCh38 \
+-with-trace \
+-with-tower \
+-with-timeline run_name_timeline.htm \
+-with-report run_name_report.htm \
+--igenomes_base gs://xxxx/igenomes \
+--intervals /home/xxxx/run_name/wgs_calling_regions.hg38.4.bed \
+--outdir gs://xxxx/run_name/outdir
